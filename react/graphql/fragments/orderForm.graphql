@@ -1,0 +1,140 @@
+#import './address.graphql'
+#import './item.graphql'
+
+fragment OrderFormFragment on OrderForm {
+  id
+  items {
+    ...ItemFragment
+  }
+  canEditData
+  loggedIn
+  userProfileId
+  userType
+  marketingData {
+    coupon
+    utmCampaign
+    utmMedium
+    utmSource
+    utmiCampaign
+    utmiPart
+    utmiPage
+  }
+  totalizers {
+    id
+    name
+    value
+  }
+  shipping {
+    countries
+    availableAddresses {
+      ...Address
+    }
+    selectedAddress {
+      ...Address
+    }
+    deliveryOptions {
+      id
+      deliveryChannel
+      price
+      estimate
+      isSelected
+    }
+    pickupOptions {
+      id
+      address {
+        ...Address
+      }
+      deliveryChannel
+      price
+      estimate
+      isSelected
+      friendlyName
+      additionalInfo
+      storeDistance
+      transitTime
+      businessHours {
+        dayNumber
+        closed
+        closingTime
+        openingTime
+      }
+    }
+    isValid
+  }
+  paymentData {
+    paymentSystems {
+      id
+      name
+      groupName
+      validator {
+        regex
+        mask
+        cardCodeRegex
+        cardCodeMask
+        weights
+        useCvv
+        useExpirationDate
+        useCardHolderName
+        useBillingAddress
+      }
+      stringId
+      requiresDocument
+      isCustom
+      description
+      requiresAuthentication
+      dueDate
+    }
+    payments {
+      paymentSystem
+      bin
+      accountId
+      tokenId
+      installments
+      referenceValue
+      value
+    }
+    installmentOptions {
+      paymentSystem
+      installments {
+        count
+        hasInterestRate
+        interestRate
+        value
+        total
+      }
+    }
+    availableAccounts {
+      accountId
+      paymentSystem
+      paymentSystemName
+      cardNumber
+      bin
+    }
+    isValid
+  }
+  clientProfileData {
+    email
+    firstName
+    lastName
+    document
+    documentType
+    phone
+    isValid
+  }
+  clientPreferencesData {
+    locale
+    optInNewsletter
+  }
+  messages {
+    couponMessages {
+      code
+    }
+    generalMessages {
+      code
+      text
+      status
+    }
+  }
+  value
+  allowManualPrice
+}

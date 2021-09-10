@@ -1,0 +1,9 @@
+{
+  "store/checkout-label": "Checkout",
+  "store/checkout-autofill-message": "¡Dar una buena acogida! Sus datos han sido completados de forma segura.",
+  "store/checkout-autofill-close-label": "Cerca",
+  "store/checkout-profile-step-title": "Perfil",
+  "store/checkout-shipping-step-title": "Entrega",
+  "store/checkout-address-step-title": "Dirección",
+  "store/checkout-payment-step-title": "Pago"
+}

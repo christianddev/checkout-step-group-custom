@@ -1,0 +1,104 @@
+#import './bundleItem.graphql'
+
+fragment ItemFragment on Item {
+  additionalInfo {
+    brandName
+  }
+  attachments {
+    name
+    content
+  }
+  attachmentOfferings {
+    name
+    required
+    schema
+  }
+  bundleItems {
+    ...BundleItemFragment
+  }
+  parentAssemblyBinding
+  parentItemIndex
+  sellingPriceWithAssemblies
+  options {
+    assemblyId
+    id
+    quantity
+    seller
+    inputValues
+    options {
+      assemblyId
+      id
+      quantity
+      seller
+      inputValues
+      options {
+        assemblyId
+        id
+        quantity
+        seller
+        inputValues
+      }
+    }
+  }
+  availability
+  detailUrl
+  id
+  imageUrls {
+    at1x
+    at2x
+    at3x
+  }
+  listPrice
+  manualPrice
+  measurementUnit
+  name
+  offerings {
+    id
+    name
+    price
+    type
+    attachmentOfferings {
+      name
+      required
+      schema
+    }
+  }
+  price
+  priceTags {
+    identifier
+    isPercentual
+    name
+    rawValue
+    value
+  }
+  productCategories
+  productCategoryIds
+  productRefId
+  productId
+  quantity
+  seller
+  sellingPrice
+  skuName
+  skuSpecifications {
+    fieldName
+    fieldValues
+  }
+  unitMultiplier
+  uniqueId
+  refId
+  priceTags {
+    identifier
+    isPercentual
+    rawValue
+    value
+    name
+    ratesAndBenefitsIdentifier {
+      description
+      id
+      featured
+      name
+      matchedParameters
+    }
+  }
+  isGift
+}

@@ -1,0 +1,9 @@
+{
+  "store/checkout-label": "Checkout",
+  "store/checkout-autofill-message": "Welcome back! Your data was filled securely.",
+  "store/checkout-autofill-close-label": "Close",
+  "store/checkout-profile-step-title": "Profile",
+  "store/checkout-shipping-step-title": "Shipping",
+  "store/checkout-address-step-title": "Address",
+  "store/checkout-payment-step-title": "Payment"
+}

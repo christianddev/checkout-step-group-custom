@@ -1,0 +1,9 @@
+{
+  "store/checkout-label": "Checkout",
+  "store/checkout-autofill-message": "Bem vindo de volta! Seus dados foram preenchidos com segurança.",
+  "store/checkout-autofill-close-label": "Fechar",
+  "store/checkout-profile-step-title": "Perfil",
+  "store/checkout-shipping-step-title": "Entrega",
+  "store/checkout-address-step-title": "Endereço",
+  "store/checkout-payment-step-title": "Pagamento"
+}
